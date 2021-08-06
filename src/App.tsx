@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Row, Divider } from 'antd';
+import "antd/dist/antd.css";
+import Upload from './Components/Upload';
+
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Header>Header</Header>
+      <Content      >
+        <Row justify="center" style={{ textAlign: 'center', paddingTop: '2rem' }}>
+
+          <h1>Upload new image</h1>
+          <Upload />
+          <Divider />
+          <h1>Your Library</h1>
+        </Row>
+
+      </Content>
+      <Footer>Footer</Footer>
+    </Layout>
   );
 }
 
